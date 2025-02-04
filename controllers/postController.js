@@ -51,7 +51,7 @@ async function createPost(req, res) {
       return res.status(403).json({ message: 'User not found' });
     }
 
-    if (user.rank != 0) {
+    if (user.rank != 1) {
       if (newPost.title && newPost.description && (newPost.tags === undefined || (Array.isArray(newPost.tags) && (newPost.tags.length === 0 || newPost.tags.length > 0)))) {
         newPost.rank = user.rank === 5 ? "관리자" : "유저";
         newPost.date = formatDate(new Date());

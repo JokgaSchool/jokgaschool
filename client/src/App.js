@@ -101,6 +101,7 @@ function App() {
                 <Route path="/message" element={<Direct />} />
                 <Route path="/proxy" element={<Proxy />} />
                 <Route path="/posts/view/:id" element={<PostDetail/>} />
+                <Route path="/webproxy" element={<Proxy/>} />
             </Route>
 
             <Route element={<PrivateRoute><MainLayout /></PrivateRoute>}>

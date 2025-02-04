@@ -10,8 +10,8 @@ function MainContent() {
         </div>
         <div className="item-grid">
           <div className="item-card">
-            <h3>[윤석열] 탄핵</h3>
-            <p>누적 집계수: 0</p>
+            <h3>기능 준비 중</h3>
+            <p>누적 집계수: nil</p>
           </div>
         </div>
       </div>
@@ -22,7 +22,7 @@ function MainContent() {
         </div>
         <div className="item-grid">
           <div className="item-card">
-            <h3>나가 뒤져</h3>
+            <h3>감사합니다</h3>
             <p></p>
           </div>
         </div>

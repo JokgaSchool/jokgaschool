@@ -1,0 +1,10 @@
+{
+    "routes": [
+      {
+        "src": "^/.*",
+        "dest": "https://jokgaschool.louis1618.shop$0",
+        "status": 301
+      }
+    ]
+  }
+  

@@ -12,7 +12,6 @@ require('dotenv').config();
 
 const app = express();
 const http = require('http').createServer(app);
-const io = require('socket.io')(http);
 
 const port = 3001;
 
@@ -50,10 +49,6 @@ app.use('/api', commentRoutes);
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 });
-
-// Socket 설정
-// require('./socket')(io);
-
 
 http.listen(port, () => {
     console.log(`Server running at http://localhost:${port}/`);

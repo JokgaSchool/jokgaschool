@@ -1,0 +1,101 @@
+.yearSection {
+    margin-bottom: -10px;
+  }
+  
+  .yearTitle {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 3px;
+    border-bottom: 3px solid #444;
+    margin: 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    padding: 8px 0;
+  }
+  
+  .monthTitle {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #bbb;
+    position: sticky;
+    top: 50px;
+    z-index: 5;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+  
+  .monthSection {
+    margin-bottom: 10px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding-bottom: 25px;
+  }
+  
+  .card {
+    background: linear-gradient(135deg, #1e1e2f, #252542);
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  }
+  
+  .cardTitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .cardDate {
+    font-size: 14px;
+    color: #bbb;
+    margin-bottom: 10px;
+  }
+  
+  .cardDescription {
+    font-size: 16px;
+    color: #ddd;
+    margin-bottom: 12px;
+  }
+  
+  .cardLink {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #4a90e2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin-top: 12px;
+  }
+  
+  .cardLink:hover {
+    color: #74b9ff;
+  }
+  
+  .cardLinkIcon {
+    margin-right: 8px;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+  
+  .cardLinkText {
+    font-size: 16px;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+  }

@@ -1,0 +1,234 @@
+.layout_header-container {
+  display:none;
+  width: 100%;
+  background-color: rgba(18, 19, 23, 0.9);
+  z-index: 10000;
+  height: 55px;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mobile-menu-toggle {
+  display:none;
+  top: 0;
+  left: 0;
+  margin-top: 2px;
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+  background: rgba(18, 19, 23, 0.9);
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 100%;
+  transition: background-color 0.3s;
+}
+
+.mobile-menu-toggle:hover {
+  background: #2C2E34;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar.mobile-open {
+    transform: translateX(0);
+  }
+
+  .layout_header-container {
+    display: flex;
+  }
+
+  .mobile-menu-toggle {
+    display:block;
+  }
+}
+
+.header-user-info_ui {
+  margin-left: auto;
+}
+
+.header-user-info_ui .user-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border-radius: 100%;
+  font-weight: bold;
+  position: relative;
+  cursor: pointer;
+}
+
+.header-user-info_ui .user-button_login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 80px;
+  height: 45px;
+  margin-right: 15px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border-radius: 40px;
+  font-weight: bold;
+  position: relative;
+  cursor: pointer;
+  padding: 0 15px;
+}
+
+.header-user-info_ui .user-button_login i {
+  margin-right: 12px;
+}
+
+.header-user-info_ui .user-button.active, .user-button_login.active {
+  background-color: #3d3f46;
+}
+
+.header-user-info_ui .user-button:not(.active):hover, .user-button_login:not(.active):hover {
+  background-color: #2C2E34;
+}
+
+.header-user-info_ui .user-button.authenticated {
+  padding: 10px 27px;
+}
+
+.header-user-info_ui .user-button.unauthenticated {
+  padding: 14px 27px;
+}
+
+.header-user-info_ui .user-button .user-popup button:hover {
+  background-color: #2C2E34;
+}
+
+.header-user-info_ui .user-button i {
+  width: auto;
+  text-align: center;
+}
+
+.header-user-info_ui .user-button .user-popup {
+  position: absolute;
+  top: 55px;
+  right: 10px;
+  left: auto;
+  transform: none;
+  background-color: #1f2024;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  z-index: 10000;
+  border-radius: 16px;
+  overflow: hidden;
+  animation: fadeInDown 0.25s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header-user-info_ui .user-popup-header {
+  padding: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.header-user-info_ui .user-popup-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #3d3f46;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.header-user-info_ui .user-popup-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.header-user-info_ui .user-popup-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.header-user-info_ui .user-popup-handle {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.header-user-info_ui .user-popup-buttons {
+  padding: 8px;
+}
+
+.header-user-info_ui .user-button .user-popup button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 14px 16px;
+  border: none;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 12px;
+  gap: 12px;
+}
+
+.header-user-info_ui .user-button .user-popup button:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  transform: translateX(4px);
+}
+
+.header-user-info_ui .user-button .user-popup button i {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  width: 20px;
+  text-align: center;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-left: 12px;
+  margin-top: 5px;
+}
+
+.user-display-name {
+  font-weight: bold;
+  font-size: 1em;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.user-handle {
+  font-size: 1em;
+  color: #888;
+  margin-top: 5px;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

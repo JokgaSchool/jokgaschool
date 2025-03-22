@@ -1,0 +1,50 @@
+.errorPage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  text-align: center;
+  background: none;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.errorPage .logo_img {
+  width: 150px;
+}
+
+.errorPage h1 {
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.errorPage button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.errorPage button a {
+  color: white;
+  text-decoration: none;
+}
+
+.errorPage button:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (max-width: 768px) {
+  .errorPage {
+    width: 250px;
+  }
+}

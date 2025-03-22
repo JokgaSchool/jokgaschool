@@ -1,0 +1,107 @@
+body, html, #root {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(135deg, #13151a 0%, #1a1c23 100%);
+  margin: 0;
+  padding: 0;
+  height: 100dvh;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+/* main */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  overflow-y: auto;
+}
+
+.main-content {
+  margin-top: 10px;
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  margin-left: 320px;
+}
+
+@media screen and (max-width: 768px) {
+  .main-content {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    margin-left: 0px; 
+  }
+}
+
+.content {
+  flex: 1;
+  padding: 15px;
+  max-height: calc(100vh - 50px);
+  color: white;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.content::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.content::-webkit-scrollbar-track {
+  background: #121317;
+}
+
+.prs-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.prs-message svg {
+  width: 3.25em;
+  transform-origin: center;
+  animation: rotate4 2s linear infinite;
+  }
+  
+.prs-message circle {
+  fill: none;
+  stroke: hsl(214, 97%, 59%);
+  stroke-width: 4;
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  animation: dash4 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate4 {
+100% {
+  transform: rotate(360deg);
+}
+}
+
+@keyframes dash4 {
+0% {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+}
+
+50% {
+  stroke-dasharray: 90, 200;
+  stroke-dashoffset: -35px;
+}
+
+100% {
+  stroke-dashoffset: -125px;
+}
+}

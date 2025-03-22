@@ -1,0 +1,58 @@
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #121317;
+}
+
+/* loading css */
+body.loading > *:not(#loading) {
+    display: none;
+}
+
+body.loaded #loading {
+    display: none;
+}
+
+#loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #121317;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#loading img {
+    max-width: 130px;
+    margin-bottom: 50px;
+}
+
+#progress-container {
+    width: 40%;
+    height: 5px;
+    background: #f3f3f3;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: -30px;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(to right, #76c48c, #6dd59c);
+    transition: width 0.3s;
+}
+
+#loading-text {
+    position: absolute;
+    bottom: 0px;
+    height: 10%;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 600;
+}
